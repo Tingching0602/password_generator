@@ -40,6 +40,11 @@ function generatePassword(options) {
     )
   }
 
+  //return error
+  if (collection.length === 0) {
+    return 'There is no valid character in your selection.'
+  }
+
   // start generating password
   let password = ''
   for (let i = 1; i <= options.length; i++) {
